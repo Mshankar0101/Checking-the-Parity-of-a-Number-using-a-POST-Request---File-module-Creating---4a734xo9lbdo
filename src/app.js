@@ -13,7 +13,7 @@ const server = http.createServer((req, res) => {
      
 
         if(!obj || !value ){
-          res.writeHead(200, {'Content-Type': 'text/plain' } )
+          res.writeHead(400, {'Content-Type': 'text/plain' } )
           return res.end('Invalid payload. Please provide a JSON object with a "num1" field containing a number.');
           
         }else if(parseInt(value) % 2 ===0){
